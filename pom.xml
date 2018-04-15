@@ -24,8 +24,8 @@
   <parent>
     <groupId>org.apache.archiva.redback.components</groupId>
     <artifactId>redback-components</artifactId>
-    <version>2.3</version>
-    <relativePath>../redback-components-parent/pom.xml</relativePath>
+    <version>2.5-SNAPSHOT</version>
+    <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <version>2.2-SNAPSHOT</version>
@@ -33,19 +33,24 @@
   <packaging>bundle</packaging>
   <name>Expression Evaluator Components</name>
 
-  <url>http://archiva.apache.org/redback/components/${project.artifactId}</url>
+  <properties>
+    <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-expression-evaluator.git</scmBrowseUrl>
+  </properties>
+
+
+  <url>${webUrl}/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/archiva/site-content/redback/components/${project.artifactId}</url>
+      <url>${siteUrl}/${project.artifactId}</url>
     </site>
   </distributionManagement>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/expression-evaluator</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/expression-evaluator</developerConnection>
-    <url>http://svn.apache.org/viewvc/archiva/redback/redback-components/trunk/expression-evaluator</url>
+    <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-expression-evaluator.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/archiva-redback-components-expression-evaluator.git</developerConnection>
+    <url>${scmBrowseUrl}</url>
   </scm>
 
   <dependencies>
@@ -74,5 +79,24 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <reportSets>
+            <reportSet>
+              <id>aggregate</id>
+              <inherited>false</inherited>
+              <reports>
+                <report>aggregate</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+        </plugin>
+    </plugins>
+  </reporting>
+
 
 </project>
