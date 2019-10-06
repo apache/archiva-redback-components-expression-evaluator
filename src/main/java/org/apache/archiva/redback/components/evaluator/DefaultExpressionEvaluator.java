@@ -19,7 +19,7 @@ package org.apache.archiva.redback.components.evaluator;
  * under the License.
  */
 
-import org.codehaus.plexus.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Iterator;

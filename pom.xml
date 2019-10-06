@@ -45,11 +45,13 @@
     <url>${scmBrowseUrl}</url>
   </scm>
 
+
   <dependencies>
     <dependency>
-      <groupId>org.codehaus.plexus</groupId>
-      <artifactId>plexus-utils</artifactId>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
     </dependency>
+
   </dependencies>
 
 </project>
